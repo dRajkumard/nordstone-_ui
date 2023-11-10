@@ -21,9 +21,9 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems:'center',
-    padding:'5%',
-    
+    alignItems: 'center',
+    padding: '5%',
+
     backgroundColor: 'black',
   },
   leftside: {
@@ -31,12 +31,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   title: {
-    fontFamily:'montserrat',
-    fontWeight:'500',
+    fontFamily: 'montserrat',
+    fontWeight: '500',
     color: '#D6DED1',
     fontSize: 22,
-    marginLeft:6.5,
-    //   fontFamily:FONT_FAMILY_MEDIUM
+    marginLeft: 6.5,
   },
   icon: {
     color: '#D6DED1',

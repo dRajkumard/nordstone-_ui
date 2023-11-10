@@ -1,20 +1,19 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import {View, StyleSheet, Text} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import { SECONDARY_COLOR } from '../common/navigation/utils/color';
+import {SECONDARY_COLOR} from '../common/navigation/utils/color';
 
-const NotificationCard = ({ data }) => {
-  console.log("data", data);
+const NotificationCard = ({data}) => {
+  console.log('data', data);
   const gradientColors = [
     'rgba(244, 248.82, 249, 0.10)',
     'rgba(244, 246, 249, 0)',
   ];
   return (
     <LinearGradient
-    colors={gradientColors}
-          style={styles.linearGradient}
-      start={{ x: 0, y: 1 }}
-    >
+      colors={gradientColors}
+      style={styles.linearGradient}
+      start={{x: 0, y: 1}}>
       <View style={styles.cardContent}>
         <Text style={styles.title}>{data.title}</Text>
         <Text style={styles.time}>{data.time}</Text>
@@ -40,19 +39,19 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
   },
   title: {
-    fontFamily:'roboto',
+    fontFamily: 'roboto',
     color: SECONDARY_COLOR,
     fontSize: 12,
     fontWeight: '500',
   },
   time: {
-    fontFamily:'roboto',
+    fontFamily: 'roboto',
     color: '#9F9F9F',
     fontSize: 8,
     fontWeight: '400',
   },
   description: {
-    fontFamily:'roboto',
+    fontFamily: 'roboto',
     color: 'white',
     fontSize: 14,
     fontWeight: '400',

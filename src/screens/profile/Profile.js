@@ -7,7 +7,6 @@ import {
   Dimensions,
   Image,
   TouchableOpacity,
- 
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {Button, Avatar} from 'react-native-paper';
@@ -34,14 +33,13 @@ const Profile = ({navigation}) => {
       right: false,
     },
     {
-        title: 'chat with support',
-        icon: 'chatbox',
-        right: false,
-      },
+      title: 'chat with support',
+      icon: 'chatbox',
+      right: false,
+    },
   ];
   const navigateToEditProfile = () => {
-    // Navigate to the EditProfile screen
-    navigation.navigate('updateProfile'); // Replace 'EditProfile' with the name of your Edit Profile screen
+    navigation.navigate('updateProfile');
   };
   return (
     <LinearGradient
@@ -58,13 +56,15 @@ const Profile = ({navigation}) => {
           </View>
         </View>
         <TouchableOpacity onPress={navigateToEditProfile}>
-            <Text style={[styles.userDetails, styles.edit]}>Edit</Text>
-          </TouchableOpacity>
+          <Text style={[styles.userDetails, styles.edit]}>Edit</Text>
+        </TouchableOpacity>
       </View>
       <FlatList
         data={profileItems}
         keyExtractor={(item, index) => index.toString()}
-        renderItem={({ item }) => <ProfileCard data={item} navigation={navigation}/>}
+        renderItem={({item}) => (
+          <ProfileCard data={item} navigation={navigation} />
+        )}
       />
     </LinearGradient>
   );
@@ -74,16 +74,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    // justifyContent: 'center',
-    // alignItems: 'center',
     backgroundColor: PRIMARY_COLOR,
   },
   userDetailcontainer: {
-    marginTop:'5%',
-    marginBottom:'10%',
+    marginTop: '5%',
+    marginBottom: '10%',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    // alignItems:'center'
   },
   avatarImage: {
     width: 64,

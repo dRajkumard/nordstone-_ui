@@ -10,52 +10,40 @@ import UpdatePassword from '../../screens/profile/UpdatePassword';
 
 const Stack = createNativeStackNavigator();
 
-
 export const HomeStack = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name='notifications'
+        name="notifications"
         component={Notification}
-        options={({ navigation }) => ({
-          // title: null,
-          header: () => (
-            <DefaultHeader title="Notification"/>
-          ),
-        })}
-      />
-       <Stack.Screen
-        name='profile'
-        component={Profile}
-        options={({ navigation }) => ({
-          // title: null,
-          header: () => (
-            <DefaultHeader title="Profile"/>
-          ),
+        options={({navigation}) => ({
+          header: () => <DefaultHeader title="Notification" />,
         })}
       />
       <Stack.Screen
-        name='settings'
-        component={Settings}
-        options={({ navigation }) => ({
-          // title: null,
-          header: () => (
-            <DefaultHeader title="Settings"/>
-          ),
+        name="profile"
+        component={Profile}
+        options={({navigation}) => ({
+          header: () => <DefaultHeader title="Profile" />,
         })}
       />
-       <Stack.Screen
-        name='updateProfile'
+      <Stack.Screen
+        name="settings"
+        component={Settings}
+        options={({navigation}) => ({
+          header: () => <DefaultHeader title="Settings" />,
+        })}
+      />
+      <Stack.Screen
+        name="updateProfile"
         component={UpdateProfile}
-        options={{headerShown:false}}
+        options={{headerShown: false}}
       />
-       <Stack.Screen
-        name='updatePassword'
+      <Stack.Screen
+        name="updatePassword"
         component={UpdatePassword}
-        options={{headerShown:false}}
+        options={{headerShown: false}}
       />
-     
-     
     </Stack.Navigator>
   );
 };

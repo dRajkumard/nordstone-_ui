@@ -2,15 +2,8 @@ import React from 'react';
 import {Text, View, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {Button, TextInput} from 'react-native-paper';
-import {
-  PRIMARY_COLOR,
-  SECONDARY_COLOR,
-  TERTIARY_COLOR,
-} from '../../common/navigation/utils/color';
+import {PRIMARY_COLOR} from '../../common/navigation/utils/color';
 const UpdatePassword = ({navigation}) => {
-  const handleClick = () => {
-    navigation.navigate('login');
-  };
   const gradientColors = [PRIMARY_COLOR, PRIMARY_COLOR];
   return (
     <View style={styles.container}>
@@ -28,16 +21,16 @@ const UpdatePassword = ({navigation}) => {
             style={styles.Input}
             label="Name"
             labelStyle={{color: '#49454F'}}
-            // placeholder
+            placeholder
             theme={{
               colors: {
-                primary: 'transparent', 
-                text: '#49454F', 
-                placeholder: 'white', 
+                primary: 'transparent',
+                text: '#49454F',
+                placeholder: 'white',
               },
             }}
-            underlineColor="transparent" 
-            underlineColorAndroid="transparent" 
+            underlineColor="transparent"
+            underlineColorAndroid="transparent"
           />
 
           <TextInput
@@ -46,16 +39,14 @@ const UpdatePassword = ({navigation}) => {
             labelStyle={{color: '#49454F'}}
             theme={{
               colors: {
-                primary: 'transparent', // Sets the border color to transparent when focused
-                text: '#49454F', // Set the text color
-                placeholder: 'white', // Set the placeholder color
+                primary: 'transparent',
+                text: '#49454F',
+                placeholder: 'white',
               },
             }}
-            underlineColor="transparent" // Set the underline color to transparent
-            underlineColorAndroid="transparent" // Set the underline color for Android to transparent
+            underlineColor="transparent"
+            underlineColorAndroid="transparent"
           />
-
-          {/* </View> */}
         </View>
         <Button style={styles.button} labelStyle={{color: '#666971'}}>
           Change email address
@@ -90,13 +81,13 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    fontFamily:'Montserrat',
+    fontFamily: 'Montserrat',
     width: '100%',
     color: '#AEB3B8',
     fontSize: 18,
     fontWeight: '600',
     letterSpacing: 0.2,
-    // lineHeight: 23.4,
+
     fontStyle: 'normal',
     textAlign: 'left',
   },
@@ -107,8 +98,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   Input: {
-    fontFamily:'roboto',
-    fontWeight:'400',
+    fontFamily: 'roboto',
+    fontWeight: '400',
     width: '100%',
     backgroundColor: 'transparent',
     borderColor: '#9F9F9F',
@@ -123,8 +114,8 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    fontFamily:'roboto',
-    fontWeight:'500',
+    fontFamily: 'roboto',
+    fontWeight: '500',
     width: '100%',
     height: 50,
     backgroundColor: '#85E0A3',

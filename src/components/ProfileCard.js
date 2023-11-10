@@ -6,7 +6,6 @@ import {
   TERTIARY_COLOR,
 } from '../common/navigation/utils/color';
 import IonIcon from 'react-native-vector-icons/Ionicons';
-// import {Switch} from 'react-native-paper';
 
 const ProfileCard = ({data, navigation}) => {
   console.log('data', data);
@@ -17,14 +16,12 @@ const ProfileCard = ({data, navigation}) => {
     'rgba(244, 246, 249, 0)',
   ];
   const handleCardPress = () => {
-    // Navigate to the Settings screen when the card is clicked
     if (data.title === 'Settings') {
-      navigation.navigate('settings'); // Replace 'Settings' with the actual screen name
+      navigation.navigate('settings');
     }
     if (data.title === 'Password') {
-      navigation.navigate('updatePassword'); // Replace 'PasswordEdit' with the actual screen name for editing the password
+      navigation.navigate('updatePassword');
     }
-    // Add more conditions for other cards if needed
   };
 
   return (
@@ -71,8 +68,6 @@ const styles = StyleSheet.create({
     padding: 16,
     margin: 0.8,
     marginTop: 8,
-   
-   
   },
   cardContent: {
     paddingHorizontal: 8,
@@ -85,7 +80,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontFamily:'roboto',
+    fontFamily: 'roboto',
     color: TERTIARY_COLOR,
     fontSize: 14,
     fontWeight: '600',

@@ -40,16 +40,13 @@ const Notification = ({navigation}) => {
       style={styles.container}
       start={{x: 0, y: 0}}
       end={{x: 0, y: 1}}>
-        {/* <View  > */}
-
-       
       <FlatList
-      style={styles.flatList}
+        style={styles.flatList}
         data={notificationstate}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({item}) => <NotificationCard data={item} />}
       />
-       {/* </View> */}
+
       <View style={styles.buttoncontainer}>
         {notificationstate.length === 0 ? (
           <View
@@ -76,32 +73,30 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: PRIMARY_COLOR,
   },
-  flatList:{
-width:'90%',
+  flatList: {
+    width: '90%',
   },
   buttonContainer: {
-    // position: 'absolute',
-    bottom: Dimensions.get('window').height / 2 - 30, // Adjust as needed
+    bottom: Dimensions.get('window').height / 2 - 30,
   },
   buttoncontainer: {
     width: '100%',
-    alignItems:'center',
-    
+    alignItems: 'center',
   },
-  stateclearbutton:{
-    width: '80%', // Set the button width to 80% of the parent container's width
+  stateclearbutton: {
+    width: '80%',
     color: '#1D192B',
     backgroundColor: '#85E0A3',
     paddingVertical: 10,
     paddingLeft: 24,
     paddingRight: 24,
-    marginBottom:40,
+    marginBottom: 40,
     borderRadius: 30,
   },
   button: {
-    fontFamily:'roboto',
-    fontWeight:'500',
-    width: '80%', // Set the button width to 80% of the parent container's width
+    fontFamily: 'roboto',
+    fontWeight: '500',
+    width: '80%',
     color: '#1D192B',
     backgroundColor: '#85E0A3',
     paddingVertical: 10,
@@ -116,8 +111,8 @@ width:'90%',
     marginBottom: 16,
   },
   noNotificationcontainer: {
-    width:'100%',
-    alignItems:'center',
+    width: '100%',
+    alignItems: 'center',
     display: 'flex',
     flexDirection: 'column',
   },
